@@ -1,0 +1,5 @@
+Consumer Key (API Key)	Na9ltf0tuN1WxQ5y2NUQflhZL
+Consumer Secret (API Secret)	RKYQBHCbPIDQ0pLlTvBOCONtqZg6qwBLSXVgpQ4KnwtdsSGwWF
+Access Level	Read and write (modify app permissions)
+Owner	Ruzjaa
+Owner ID	573915960

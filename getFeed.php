@@ -13,6 +13,37 @@
 	
 	$requestMethod = "GET";
 	
+	$file_name = "cache.txt";
+	$data_json = file_get_contents("cache.txt");
+	$data = json_decode($data_json);
+	
+	//KONTROLLI KAS strtotime(date('c')) - strtotime($data->date_written) > 10
+	
+	//$config tuleb config.php failist
+	$twitter = new twitterAPIExchange($config);
+	
+	$dataFromAPI = $twitter->setGetfield($getField)
+						->buildOauth($url, $requestMethod)
+						->performRequest();
+						
+	//echo $dataFromAPI;
+	
+	$o = new StdClass();
+	$o->date_written = date('c');
+	$o->api = $dataFromAPI;
+	
+	//teen objekti stringiks ja salvestan faili
+	file_put_contents($file_name, json_encode($o));
+	
+	echo json_encode($o);
+	
+	
+	
+	
+	
+	
+	
+	
 	
  
  ?>
